@@ -12,15 +12,12 @@ using static SpecflowPages.CommonMethods;
 
 namespace SpecflowPages.Utils
 {
-    public class ProfileLangPage
+   public  class ProfileLangPage
     {
 
-        //public static void CheckProfilePageClicked()
-        //{
-        //   Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[1]/div/a[2]")).Click();
-        //}
 
-        public static void AddLang()
+        //Add New Language
+        public  void AddLang()
         {
             
                 //Click on Add New button
@@ -38,7 +35,7 @@ namespace SpecflowPages.Utils
         }
 
         //Validate the language is added sucessfully
-        public static void ValidateAddLang()
+        public  void ValidateAddLang()
         {
             try
             {
@@ -74,7 +71,8 @@ namespace SpecflowPages.Utils
             }
         }
 
-        public static void UpdateLang()
+        //Update the given Language
+        public void UpdateLang()
         {
             String expecteValue= "Chinese1";
 
@@ -119,7 +117,8 @@ namespace SpecflowPages.Utils
 
         }
 
-        public static void ValidateUpdatedLang()
+        //Validate the updated language
+        public  void ValidateUpdatedLang()
         {
 
             try
@@ -151,7 +150,8 @@ namespace SpecflowPages.Utils
             }
         }
 
-        public static void DeleteLang()
+        //Delete a given language
+        public  void DeleteLang()
         {
             String expectedValue = "Japnese";
             //Get the table row list
@@ -178,7 +178,9 @@ namespace SpecflowPages.Utils
             }
 
         }
-        public static void ValidateDeletedLang()
+
+        //Validate a deleted language
+        public  void ValidateDeletedLang()
         {
             try
             {

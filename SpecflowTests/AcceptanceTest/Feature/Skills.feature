@@ -1,12 +1,10 @@
-﻿Feature: AddSkills
+﻿Feature: Skills Tab
 	  As a Skill Trader
-      I want to be able to update Education that i have
+      I want to be able to Add,update,delete skills 
       In order to update my profile details
 
-Background: 
-   Given I Logged in Profile Page 
 
-@mytag
+@automation
 Scenario Outline: Add Skill 
     Given I clicked on the Skills tab under Profile page
 	When I add new skill'<Skillname>', '<SkillLevel>'	
@@ -43,7 +41,7 @@ Examples:
     | ErrorMessage | 
     | Please Enter Skill and SkillLevel| 
 		
-	
+@automation	
 Scenario: Update Skill 
     Given I clicked on the Skills tab under Profile page
 	When I update skill 
@@ -73,7 +71,7 @@ Scenario Outline: Update Skill without Mandatory details
     | ErrorMessage | 
     | Please Enter Skill and SkillLevel|
 	
-
+@automation
 Scenario Outline: Delete Skill 
     Given I clicked on the Skills tab under Profile page
 	When I delete skill '<Skillname>'

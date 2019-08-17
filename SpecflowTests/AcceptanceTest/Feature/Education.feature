@@ -1,12 +1,10 @@
-﻿Feature: AddEducation
+﻿Feature: Education Tab
 	  As a Skill Trader
-      I want to be able to update education that i have
+      I want to be able to Add,update,delete education 
       In order to update my profile details
 
-Background: 
-   Given I Logged in Profile Page 
 
-@mytag
+@automation
 Scenario Outline:Add Education
     Given I clicked on the Education tabunder Profile page
 	When i add new education'<Collegename>' '<CollegeCountry>' '<EducationTitle>' '<Degreename>' '<GraduationYear>'
@@ -34,6 +32,7 @@ Examples:
     | ErrorMessage | 
     | Please Enter all details  | 
 
+@automation
 Scenario Outline:Update Education
     Given I clicked on the Education tabunder Profile page
 	When I update education'<Collegename>' 
@@ -50,6 +49,7 @@ Examples:
     | ErrorMessage | 
     | Please Enter all details| 
 	
+@automation
 Scenario Outline:Delete  Education
     Given I clicked on the Education tabunder Profile page
 	When I delete Education '<Collegename>' 

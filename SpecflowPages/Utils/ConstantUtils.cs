@@ -13,15 +13,13 @@ namespace SpecflowPages
         public static string Url = "http://www.skillswap.pro/";
 
         //ScreenshotPath
-        //public static string ScreenshotPath = @"G:\IC_Projects\Mars\SpecflowTests-Base\SpecflowTests\SpecflowPages\TestReports\Screenshots\";
-        public static string ScreenshotPath = Directory.GetCurrentDirectory();
-
+        public static string ScreenshotPath = @"G:\IC_Projects\Mars\SpecflowTests-Base\SpecflowTests\SpecflowPages\TestReports\Screenshots\";
 
         //ExtentReportsPath
-        public static string ReportsPath = Directory.GetCurrentDirectory();
+        public static string ReportsPath = @"G:\IC_Projects\Mars\SpecflowTests-Base\SpecflowTests\SpecflowPages\TestReports\Test.html";
 
         //ReportXML Path
-        public static string ReportXMLPath = Directory.GetCurrentDirectory();
+        public static string ReportXMLPath = @"G:\IC_Projects\Mars\SpecflowTests-Base\SpecflowTests\SpecflowPages\TestReports\ReportXML.xml";
 
 
 

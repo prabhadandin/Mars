@@ -18,14 +18,14 @@ namespace SpecflowTests.AcceptanceTest.Feature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.2.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class AddCertificationFeature
+    public partial class CertificationTabFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "SpecFlowFeature4.feature"
+#line 1 "Certifications.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -44,8 +44,8 @@ namespace SpecflowTests.AcceptanceTest.Feature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Add Certification", "\t  As a Skill Trader\r\n      I want to be able to update Certification that i have" +
-                    "\r\n      In order to update my profile details", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Certification tab", "\t  As a Skill Trader\r\n      I want to be able to Add,update,delete Certifications" +
+                    " \r\n      In order to update my profile details", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -60,9 +60,9 @@ namespace SpecflowTests.AcceptanceTest.Feature
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Add Certification")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Certification tab")))
             {
-                global::SpecflowTests.AcceptanceTest.Feature.AddCertificationFeature.FeatureSetup(null);
+                global::SpecflowTests.AcceptanceTest.Feature.CertificationTabFeature.FeatureSetup(null);
             }
         }
         
@@ -83,32 +83,22 @@ namespace SpecflowTests.AcceptanceTest.Feature
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 6
-#line 7
-   testRunner.Given("I Logged in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         public virtual void AddCertification(string certificationname, string certificationfrom, string certificationYear, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "mytag"};
+                    "automation"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Certification", @__tags);
-#line 10
+#line 8
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 11
+#line 9
     testRunner.Given("I clicked on the Certifcation tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 12
+#line 10
  testRunner.When(string.Format("i add new certification \'{0}\' \'{1}\' \'{2}\'", certificationname, certificationfrom, certificationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 11
  testRunner.Then("i should see  the certification\'<Certificatename>\' displayed on my listings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -116,30 +106,30 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add Certification: Java")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add Certification")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Certification tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Java")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Certificationname", "Java")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Certificationfrom", "JAVA Association")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:CertificationYear", "1")]
         public virtual void AddCertification_Java()
         {
-#line 10
+#line 8
 this.AddCertification("Java", "JAVA Association", "1", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add Certification: ISTQB")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add Certification")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Certification tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "ISTQB")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Certificationname", "ISTQB")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Certificationfrom", "ISTQB Association")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:CertificationYear", "2")]
         public virtual void AddCertification_ISTQB()
         {
-#line 10
+#line 8
 this.AddCertification("ISTQB", "ISTQB Association", "2", ((string[])(null)));
 #line hidden
         }
@@ -147,15 +137,13 @@ this.AddCertification("ISTQB", "ISTQB Association", "2", ((string[])(null)));
         public virtual void AddCertificationWithoutMandatoryDetails(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add certification without Mandatory details", exampleTags);
-#line 19
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 20
+#line 18
     testRunner.Given("I clicked on the Certifcation tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
+#line 19
  testRunner.When("i dont provide certification Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
+#line 20
  testRunner.Then(string.Format("i should see  the \'{0}\' displayed on screen", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -164,28 +152,32 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add certification without Mandatory details: Please Enter Certification Name,Cert" +
             "ifcation From and Certifcation Year")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add Certification")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Certification tab")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Please Enter Certification Name,Certifcation From and Certifcation Year")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "Please Enter Certification Name,Certifcation From and Certifcation Year")]
         public virtual void AddCertificationWithoutMandatoryDetails_PleaseEnterCertificationNameCertifcationFromAndCertifcationYear()
         {
-#line 19
+#line 17
 this.AddCertificationWithoutMandatoryDetails("Please Enter Certification Name,Certifcation From and Certifcation Year", ((string[])(null)));
 #line hidden
         }
         
         public virtual void UpdateCertification(string certificationname, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Certification", exampleTags);
-#line 28
+            string[] @__tags = new string[] {
+                    "automation"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Certification", @__tags);
+#line 26
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 29
+#line 27
     testRunner.Given("I clicked on the Certifcation tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 30
+#line 28
  testRunner.When(string.Format("i update certification \'{0}\'", certificationname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 31
+#line 29
  testRunner.Then("i should see updated certification\'<Certificatename>\' displayed on my listings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -193,12 +185,13 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Update Certification: C#")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add Certification")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Certification tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "C#")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Certificationname", "C#")]
         public virtual void UpdateCertification_C()
         {
-#line 28
+#line 26
 this.UpdateCertification("C#", ((string[])(null)));
 #line hidden
         }
@@ -206,15 +199,13 @@ this.UpdateCertification("C#", ((string[])(null)));
         public virtual void UpdateCertificationWithoutMandatoryDetails(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Certification without Mandatory details", exampleTags);
-#line 37
+#line 35
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 38
+#line 36
     testRunner.Given("I clicked on the Certifcation tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 39
+#line 37
  testRunner.When("dont provide certification Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 38
  testRunner.Then(string.Format("i should see  the \'{0}\' displayed on screen", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -223,28 +214,32 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Update Certification without Mandatory details: Please Enter Certification Name,C" +
             "ertifcation From and Certifcation Year")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add Certification")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Certification tab")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Please Enter Certification Name,Certifcation From and Certifcation Year")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "Please Enter Certification Name,Certifcation From and Certifcation Year")]
         public virtual void UpdateCertificationWithoutMandatoryDetails_PleaseEnterCertificationNameCertifcationFromAndCertifcationYear()
         {
-#line 37
+#line 35
 this.UpdateCertificationWithoutMandatoryDetails("Please Enter Certification Name,Certifcation From and Certifcation Year", ((string[])(null)));
 #line hidden
         }
         
         public virtual void DeleteCertification(string certificationname, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Certification", exampleTags);
-#line 45
+            string[] @__tags = new string[] {
+                    "automation"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Certification", @__tags);
+#line 44
 this.ScenarioSetup(scenarioInfo);
-#line 6
-this.FeatureBackground();
-#line 46
+#line 45
     testRunner.Given("I clicked on the Certifcation tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 47
+#line 46
  testRunner.When(string.Format("i delete certification \'{0}\'", certificationname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 48
+#line 47
  testRunner.Then("i should not see the deleted certification \'<Certificatename>\' displayed on my li" +
                     "stings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -253,12 +248,13 @@ this.FeatureBackground();
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Delete Certification: C")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Add Certification")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Certification tab")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "C")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Certificationname", "C")]
         public virtual void DeleteCertification_C()
         {
-#line 45
+#line 44
 this.DeleteCertification("C", ((string[])(null)));
 #line hidden
         }

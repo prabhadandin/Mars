@@ -1,11 +1,10 @@
-﻿Feature: Add Language
+﻿Feature: Language Tab
 	  As a Skill Trader
-      I want to be able to update Languages which i know
+      I want to be able to Add,update,Delete Languages 
       In order to update my profile details
 
-Background: 
-   Given I Logged in Profile Page 
-@mytag
+   
+@automation
 Scenario: Add language
 	Given I clicked on the profile tab under Profile page
 	When I add a new language
@@ -31,7 +30,7 @@ Scenario: Add existing language from list with different LanguageLevel
 	When I add existing language but  with different LanguageLevel
 	Then i should see the ErrorMessage displayed on screen
 
-
+@automation
 Scenario: Update language 
 	Given I clicked on the profile tab under Profile page
 	When I  update Language 
@@ -53,7 +52,7 @@ Scenario: Update with existing language from list with different languagelevel
 	Then i should see the ErrorMessage displayed on screen
 
    
-     
+@automation     
 Scenario: Delete language 
 	Given I clicked on the profile tab under Profile page
 	When I delete language 

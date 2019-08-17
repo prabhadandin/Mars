@@ -1,12 +1,10 @@
-﻿Feature: Add Certification
+﻿Feature: Certification tab
 	  As a Skill Trader
-      I want to be able to update Certification that i have
+      I want to be able to Add,update,delete Certifications 
       In order to update my profile details
 
-Background: 
-   Given I Logged in Profile Page 
 
-@mytag
+@automation
 Scenario Outline: Add Certification
     Given I clicked on the Certifcation tabunder Profile page
 	When i add new certification '<Certificationname>' '<Certificationfrom>' '<CertificationYear>'
@@ -24,7 +22,7 @@ Examples:
     | ErrorMessage | 
     | Please Enter Certification Name,Certifcation From and Certifcation Year| 
   
-
+@automation
 Scenario Outline: Update Certification
     Given I clicked on the Certifcation tabunder Profile page
 	When i update certification '<Certificationname>' 
@@ -42,6 +40,7 @@ Examples:
     | ErrorMessage | 
     | Please Enter Certification Name,Certifcation From and Certifcation Year| 
 
+@automation
 Scenario Outline: Delete Certification
     Given I clicked on the Certifcation tabunder Profile page
 	When i delete certification '<Certificationname>' 

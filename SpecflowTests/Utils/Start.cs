@@ -1,12 +1,7 @@
-﻿using NUnit.Framework;
+﻿
 using RelevantCodes.ExtentReports;
 using SpecflowPages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using static SpecflowPages.CommonMethods;
 
@@ -14,39 +9,23 @@ using static SpecflowPages.CommonMethods;
 namespace SpecflowTests.Utils
 
 {
-    [TestFixture]
+    [Binding]
     public class Start : Driver
     {
        
-        [SetUp]
-        public void Login()
+        [BeforeScenario]
+        public void SetUp()
         {
             //Launch the browser
             Driver.Initialize();
-            Thread.Sleep(1500);
+            Thread.Sleep(5000);
 
             //Call the Login Class            
             SpecflowPages.Utils.LoginPage.LoginStep();
 
         }
-        
-        [Test]
-        public void FeatureLanguage1()
-        {
-
-            //call the profile page language class
-            SpecflowPages.Utils.ProfileLangPage.AddLang();
-            SpecflowPages.Utils.ProfileLangPage.ValidateAddLang();
-            SpecflowPages.Utils.ProfileLangPage.UpdateLang();
-            SpecflowPages.Utils.ProfileLangPage.ValidateUpdatedLang();
-            SpecflowPages.Utils.ProfileLangPage.DeleteLang();
-            SpecflowPages.Utils.ProfileLangPage.ValidateDeletedLang();
-
-
-        }
        
-        [TearDown]
-                 
+        [AfterScenario]                
         public void TearDown()
         {
             Thread.Sleep(500);
@@ -61,7 +40,7 @@ namespace SpecflowTests.Utils
             CommonMethods.extent.Flush();
 
             //Close the browser
-            Driver.driver.Quit();
+            driver.Quit();
         }
 
     }
