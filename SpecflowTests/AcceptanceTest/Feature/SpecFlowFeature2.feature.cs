@@ -83,6 +83,14 @@ namespace SpecflowTests.AcceptanceTest.Feature
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 7
+   testRunner.Given("I Logged in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         public virtual void AddSkill(string skillname, string skillLevel, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -92,13 +100,15 @@ namespace SpecflowTests.AcceptanceTest.Feature
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Skill", @__tags);
-#line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.When(string.Format("I add new skill\'{0}\', \'{1}\'", skillname, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 11
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.When(string.Format("I add new skill\'{0}\', \'{1}\'", skillname, skillLevel), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
  testRunner.Then(string.Format("i should see the skill \'{0}\'displayed on my listings", skillname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -113,7 +123,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:SkillLevel", "Beginner")]
         public virtual void AddSkill_Java()
         {
-#line 7
+#line 10
 this.AddSkill("Java", "Beginner", ((string[])(null)));
 #line hidden
         }
@@ -127,7 +137,7 @@ this.AddSkill("Java", "Beginner", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:SkillLevel", "Expert")]
         public virtual void AddSkill_Csharp()
         {
-#line 7
+#line 10
 this.AddSkill("Csharp", "Expert", ((string[])(null)));
 #line hidden
         }
@@ -141,7 +151,7 @@ this.AddSkill("Csharp", "Expert", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:SkillLevel", "Expert")]
         public virtual void AddSkill_C()
         {
-#line 7
+#line 10
 this.AddSkill("C++", "Expert", ((string[])(null)));
 #line hidden
         }
@@ -155,7 +165,7 @@ this.AddSkill("C++", "Expert", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:SkillLevel", "Expert")]
         public virtual void AddSkill_Python()
         {
-#line 7
+#line 10
 this.AddSkill("Python", "Expert", ((string[])(null)));
 #line hidden
         }
@@ -163,13 +173,15 @@ this.AddSkill("Python", "Expert", ((string[])(null)));
         public virtual void AddExistingSkillFromList(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add existing Skill from list", exampleTags);
-#line 18
-this.ScenarioSetup(scenarioInfo);
-#line 19
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 20
- testRunner.When("I add existing skill from list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 22
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+ testRunner.When("I add existing skill from list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
  testRunner.Then(string.Format("i should see the\'{0}\'displayed on my listings", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -182,7 +194,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "This Skill Already exists in your skill list")]
         public virtual void AddExistingSkillFromList_ThisSkillAlreadyExistsInYourSkillList()
         {
-#line 18
+#line 21
 this.AddExistingSkillFromList("This Skill Already exists in your skill list", ((string[])(null)));
 #line hidden
         }
@@ -190,13 +202,15 @@ this.AddExistingSkillFromList("This Skill Already exists in your skill list", ((
         public virtual void AddExistingSkillFromListWithDifferentSkillLevel(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add existing Skill from list with different SkillLevel", exampleTags);
-#line 26
-this.ScenarioSetup(scenarioInfo);
-#line 27
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
- testRunner.When("I add existing skill from list with different SkillLevel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 30
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When("I add existing skill from list with different SkillLevel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
  testRunner.Then(string.Format("i should see the\'{0}\'displayed on my listings", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -210,7 +224,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "This Skill Already exists in your skill list")]
         public virtual void AddExistingSkillFromListWithDifferentSkillLevel_ThisSkillAlreadyExistsInYourSkillList()
         {
-#line 26
+#line 29
 this.AddExistingSkillFromListWithDifferentSkillLevel("This Skill Already exists in your skill list", ((string[])(null)));
 #line hidden
         }
@@ -218,13 +232,15 @@ this.AddExistingSkillFromListWithDifferentSkillLevel("This Skill Already exists 
         public virtual void AddSkillWithoutMandatoryDetails(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Skill without Mandatory details", exampleTags);
-#line 35
-this.ScenarioSetup(scenarioInfo);
-#line 36
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 37
- testRunner.When("I dont provide skill Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 38
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 39
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 40
+ testRunner.When("I dont provide skill Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 41
  testRunner.Then(string.Format("i should see \'{0}\'displayed on screen", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -237,7 +253,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "Please Enter Skill and SkillLevel")]
         public virtual void AddSkillWithoutMandatoryDetails_PleaseEnterSkillAndSkillLevel()
         {
-#line 35
+#line 38
 this.AddSkillWithoutMandatoryDetails("Please Enter Skill and SkillLevel", ((string[])(null)));
 #line hidden
         }
@@ -248,13 +264,15 @@ this.AddSkillWithoutMandatoryDetails("Please Enter Skill and SkillLevel", ((stri
         public virtual void UpdateSkill()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Skill", ((string[])(null)));
-#line 44
-this.ScenarioSetup(scenarioInfo);
-#line 45
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 46
- testRunner.When("I update skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 47
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 48
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 49
+ testRunner.When("I update skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 50
  testRunner.Then("i should see updated skill displayed on my listings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -263,13 +281,15 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void UpdateWithExistingSkillFromList(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update with existing Skill from list", exampleTags);
-#line 49
-this.ScenarioSetup(scenarioInfo);
-#line 50
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 51
- testRunner.When("I update with existing skill  from list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 52
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 53
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 54
+ testRunner.When("I update with existing skill  from list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 55
  testRunner.Then(string.Format("i should see the\'{0}\'displayed on my listings", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -283,7 +303,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "This Skill Already exists in your skill list")]
         public virtual void UpdateWithExistingSkillFromList_ThisSkillAlreadyExistsInYourSkillList()
         {
-#line 49
+#line 52
 this.UpdateWithExistingSkillFromList("This Skill Already exists in your skill list", ((string[])(null)));
 #line hidden
         }
@@ -291,13 +311,15 @@ this.UpdateWithExistingSkillFromList("This Skill Already exists in your skill li
         public virtual void UpdateWithExistingSkillFromListWithDifferentSkillLevel(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update with existing Skill from list with different SkillLevel", exampleTags);
-#line 57
-this.ScenarioSetup(scenarioInfo);
-#line 58
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 59
- testRunner.When("I update with existing skill from list with different SkillLevel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 60
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 61
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 62
+ testRunner.When("I update with existing skill from list with different SkillLevel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
  testRunner.Then(string.Format("i should see the\'{0}\'displayed on my listings", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -311,7 +333,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "This Skill Already exists in your skill list")]
         public virtual void UpdateWithExistingSkillFromListWithDifferentSkillLevel_ThisSkillAlreadyExistsInYourSkillList()
         {
-#line 57
+#line 60
 this.UpdateWithExistingSkillFromListWithDifferentSkillLevel("This Skill Already exists in your skill list", ((string[])(null)));
 #line hidden
         }
@@ -319,13 +341,15 @@ this.UpdateWithExistingSkillFromListWithDifferentSkillLevel("This Skill Already 
         public virtual void UpdateSkillWithoutMandatoryDetails(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Skill without Mandatory details", exampleTags);
-#line 65
-this.ScenarioSetup(scenarioInfo);
-#line 66
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 67
- testRunner.When("I dont provide skill  Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 68
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 69
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 70
+ testRunner.When("I dont provide skill  Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 71
  testRunner.Then(string.Format("i should see \'{0}\'displayed on screen", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -338,7 +362,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "Please Enter Skill and SkillLevel")]
         public virtual void UpdateSkillWithoutMandatoryDetails_PleaseEnterSkillAndSkillLevel()
         {
-#line 65
+#line 68
 this.UpdateSkillWithoutMandatoryDetails("Please Enter Skill and SkillLevel", ((string[])(null)));
 #line hidden
         }
@@ -346,13 +370,15 @@ this.UpdateSkillWithoutMandatoryDetails("Please Enter Skill and SkillLevel", ((s
         public virtual void DeleteSkill(string skillname, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Skill", exampleTags);
-#line 74
-this.ScenarioSetup(scenarioInfo);
-#line 75
-    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 76
- testRunner.When(string.Format("I delete skill \'{0}\'", skillname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 77
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 78
+    testRunner.Given("I clicked on the Skills tab under Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 79
+ testRunner.When(string.Format("I delete skill \'{0}\'", skillname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 80
  testRunner.Then(string.Format("i should not see deleted skill \'{0}\'displayed on my listings", skillname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -365,7 +391,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Skillname", "AJAX")]
         public virtual void DeleteSkill_AJAX()
         {
-#line 74
+#line 77
 this.DeleteSkill("AJAX", ((string[])(null)));
 #line hidden
         }

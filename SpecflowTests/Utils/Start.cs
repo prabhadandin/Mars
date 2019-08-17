@@ -1,4 +1,5 @@
-﻿using RelevantCodes.ExtentReports;
+﻿using NUnit.Framework;
+using RelevantCodes.ExtentReports;
 using SpecflowPages;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,12 @@ using static SpecflowPages.CommonMethods;
 namespace SpecflowTests.Utils
 
 {
-    
+    [TestFixture]
     public class Start : Driver
     {
-        [BeforeScenario]
-        public void SetUp()
+       
+        [SetUp]
+        public void Login()
         {
             //Launch the browser
             Driver.Initialize();
@@ -28,7 +30,7 @@ namespace SpecflowTests.Utils
 
         }
         
-        
+        [Test]
         public void FeatureLanguage1()
         {
 
@@ -42,8 +44,8 @@ namespace SpecflowTests.Utils
 
 
         }
-
-        [AfterScenario]
+       
+        [TearDown]
                  
         public void TearDown()
         {

@@ -3,6 +3,9 @@
       I want to be able to update Education that i have
       In order to update my profile details
 
+Background: 
+   Given I Logged in Profile Page 
+
 @mytag
 Scenario Outline: Add Skill 
     Given I clicked on the Skills tab under Profile page

@@ -83,6 +83,14 @@ namespace SpecflowTests.AcceptanceTest.Feature
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 7
+   testRunner.Given("I Logged in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         public virtual void AddEducation(string collegename, string collegeCountry, string educationTitle, string degreename, string graduationYear, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -92,13 +100,15 @@ namespace SpecflowTests.AcceptanceTest.Feature
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Education", @__tags);
-#line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
-    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.When(string.Format("i add new education\'{0}\' \'{1}\' \'{2}\' \'{3}\' \'{4}\'", collegename, collegeCountry, educationTitle, degreename, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 11
+    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.When(string.Format("i add new education\'{0}\' \'{1}\' \'{2}\' \'{3}\' \'{4}\'", collegename, collegeCountry, educationTitle, degreename, graduationYear), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
  testRunner.Then(string.Format("i should see the education \'{0}\'displayed on my listings", collegename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -116,7 +126,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:GraduationYear", "2012")]
         public virtual void AddEducation_MIT()
         {
-#line 7
+#line 10
 this.AddEducation("MIT", "1", "1", "BAchelor", "2012", ((string[])(null)));
 #line hidden
         }
@@ -133,7 +143,7 @@ this.AddEducation("MIT", "1", "1", "BAchelor", "2012", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:GraduationYear", "2015")]
         public virtual void AddEducation_AUT()
         {
-#line 7
+#line 10
 this.AddEducation("AUT", "2", "2", "Master", "2015", ((string[])(null)));
 #line hidden
         }
@@ -150,7 +160,7 @@ this.AddEducation("AUT", "2", "2", "Master", "2015", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:GraduationYear", "2016")]
         public virtual void AddEducation_SAT()
         {
-#line 7
+#line 10
 this.AddEducation("SAT", "3", "3", "Master", "2016", ((string[])(null)));
 #line hidden
         }
@@ -158,13 +168,15 @@ this.AddEducation("SAT", "3", "3", "Master", "2016", ((string[])(null)));
         public virtual void AddExistingEducationFromList(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add existing Education from list", exampleTags);
-#line 17
-this.ScenarioSetup(scenarioInfo);
-#line 18
-    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
- testRunner.When("i add existing education from list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 21
+    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 22
+ testRunner.When("i add existing education from list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
  testRunner.Then(string.Format("i should see \'{0}\' displayed on screen", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -177,7 +189,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "This Education already exists in your list")]
         public virtual void AddExistingEducationFromList_ThisEducationAlreadyExistsInYourList()
         {
-#line 17
+#line 20
 this.AddExistingEducationFromList("This Education already exists in your list", ((string[])(null)));
 #line hidden
         }
@@ -185,13 +197,15 @@ this.AddExistingEducationFromList("This Education already exists in your list", 
         public virtual void AddEducationWithoutMandatoryDeatils(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Education without Mandatory deatils", exampleTags);
-#line 26
-this.ScenarioSetup(scenarioInfo);
-#line 27
-    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
- testRunner.When("i dont provide education Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 30
+    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When("i dont provide education Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
  testRunner.Then(string.Format("i should see \'{0}\' displayed on screen", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -204,7 +218,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "Please Enter all details")]
         public virtual void AddEducationWithoutMandatoryDeatils_PleaseEnterAllDetails()
         {
-#line 26
+#line 29
 this.AddEducationWithoutMandatoryDeatils("Please Enter all details", ((string[])(null)));
 #line hidden
         }
@@ -212,13 +226,15 @@ this.AddEducationWithoutMandatoryDeatils("Please Enter all details", ((string[])
         public virtual void UpdateEducation(string collegename, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Education", exampleTags);
-#line 34
-this.ScenarioSetup(scenarioInfo);
-#line 35
-    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 36
- testRunner.When(string.Format("I update education\'{0}\'", collegename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 37
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 38
+    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 39
+ testRunner.When(string.Format("I update education\'{0}\'", collegename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
  testRunner.Then(string.Format("i should see the updated education \'{0}\'displayed on my listings", collegename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -231,7 +247,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Collegename", "GAT")]
         public virtual void UpdateEducation_GAT()
         {
-#line 34
+#line 37
 this.UpdateEducation("GAT", ((string[])(null)));
 #line hidden
         }
@@ -239,13 +255,15 @@ this.UpdateEducation("GAT", ((string[])(null)));
         public virtual void UpdateEducationWithoutMandatoryDetails(string errorMessage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update Education without Mandatory details", exampleTags);
-#line 42
-this.ScenarioSetup(scenarioInfo);
-#line 43
-    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 44
- testRunner.When("I wont provide education Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 45
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 46
+    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 47
+ testRunner.When("I wont provide education Mandatory details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 48
  testRunner.Then(string.Format("i should see \'{0}\' displayed on screen", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -258,7 +276,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ErrorMessage", "Please Enter all details")]
         public virtual void UpdateEducationWithoutMandatoryDetails_PleaseEnterAllDetails()
         {
-#line 42
+#line 45
 this.UpdateEducationWithoutMandatoryDetails("Please Enter all details", ((string[])(null)));
 #line hidden
         }
@@ -266,13 +284,15 @@ this.UpdateEducationWithoutMandatoryDetails("Please Enter all details", ((string
         public virtual void DeleteEducation(string collegename, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete  Education", exampleTags);
-#line 50
-this.ScenarioSetup(scenarioInfo);
-#line 51
-    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 52
- testRunner.When(string.Format("I delete Education \'{0}\'", collegename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 53
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 54
+    testRunner.Given("I clicked on the Education tabunder Profile page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 55
+ testRunner.When(string.Format("I delete Education \'{0}\'", collegename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 56
  testRunner.Then(string.Format("i should not see deleted education \'{0}\'displayed on my listings", collegename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -285,7 +305,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Collegename", "PR")]
         public virtual void DeleteEducation_PR()
         {
-#line 50
+#line 53
 this.DeleteEducation("PR", ((string[])(null)));
 #line hidden
         }

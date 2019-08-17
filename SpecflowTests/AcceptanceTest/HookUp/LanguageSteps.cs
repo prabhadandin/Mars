@@ -8,9 +8,15 @@ using TechTalk.SpecFlow;
 namespace SpecflowTests.AcceptanceTest.HookUp
 {
     [Binding]
+
     public class LanguageSteps : Utils.Start
     {
-        
+        [Given(@"I Logged in Profile Page")]
+        public void GivenILoggedInProfilePage()
+        {
+            SpecflowPages.Utils.LoginPage.LoginStep();
+        }
+
         [Given(@"I clicked on the profile tab under Profile page")]
         public void GivenIClickedOnTheProfileTabUnderProfilePage()
         {

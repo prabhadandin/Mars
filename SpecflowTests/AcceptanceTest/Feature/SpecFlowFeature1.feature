@@ -1,8 +1,10 @@
-﻿Feature: Language
+﻿Feature: Add Language
 	  As a Skill Trader
       I want to be able to update Languages which i know
       In order to update my profile details
 
+Background: 
+   Given I Logged in Profile Page 
 @mytag
 Scenario: Add language
 	Given I clicked on the profile tab under Profile page

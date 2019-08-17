@@ -3,6 +3,9 @@
       I want to be able to update education that i have
       In order to update my profile details
 
+Background: 
+   Given I Logged in Profile Page 
+
 @mytag
 Scenario Outline:Add Education
     Given I clicked on the Education tabunder Profile page

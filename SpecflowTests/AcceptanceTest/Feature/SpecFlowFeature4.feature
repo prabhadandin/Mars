@@ -1,7 +1,10 @@
-﻿Feature: SpecFlowFeature4
+﻿Feature: Add Certification
 	  As a Skill Trader
       I want to be able to update Certification that i have
       In order to update my profile details
+
+Background: 
+   Given I Logged in Profile Page 
 
 @mytag
 Scenario Outline: Add Certification
