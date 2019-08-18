@@ -22,9 +22,9 @@ namespace SpecflowPages.Utils
 
             Driver.driver.FindElement(By.XPath("//a[contains(.,'Sign In')]")).Click();
             //Enter Username
-            Driver.driver.FindElement(By.XPath("//input[@name='email']")).SendKeys("prabhavathi6@gmail.com");
+            Driver.driver.FindElement(By.XPath("//input[@name='email']")).SendKeys("prabha@gmail.com");
             //Enter password
-            Driver.driver.FindElement(By.XPath("//input[contains(@name,'password')]")).SendKeys("prabha@ic");
+            Driver.driver.FindElement(By.XPath("//input[contains(@name,'password')]")).SendKeys("test");
             Thread.Sleep(1000);
             //Click on Login Button
             Driver.driver.FindElement(By.XPath("//button[contains(.,'Login')]")).Click();
