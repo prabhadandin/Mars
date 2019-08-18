@@ -13,10 +13,11 @@ namespace SpecflowPages.Utils
 {
   public class LoginPage
     {
+
         public static void LoginStep()
         {
 
-            //driver.NavigateUrl();
+           Driver.NavigateUrl();
             Thread.Sleep(1000);
 
             Driver.driver.FindElement(By.XPath("//a[contains(.,'Sign In')]")).Click();

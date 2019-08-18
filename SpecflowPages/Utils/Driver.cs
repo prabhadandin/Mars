@@ -25,7 +25,7 @@ namespace SpecflowPages
                 //Maximise the window
                 driver.Manage().Window.Maximize();
 
-                driver.Navigate().GoToUrl(BaseUrl);
+                //driver.Navigate().GoToUrl(BaseUrl);
 
             }
             catch(TimeoutException e)

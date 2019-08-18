@@ -12,7 +12,8 @@ using static SpecflowPages.CommonMethods;
 
 namespace SpecflowPages.Utils
 {
-   public  class ProfileLangPage
+    
+   public class ProfileLangPage
     {
 
      
