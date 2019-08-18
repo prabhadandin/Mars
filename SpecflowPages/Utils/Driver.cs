@@ -30,7 +30,7 @@ namespace SpecflowPages
             }
             catch(TimeoutException e)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(5000);
                 Console.WriteLine(e);
             }
         }

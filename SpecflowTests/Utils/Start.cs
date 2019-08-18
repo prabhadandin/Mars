@@ -19,7 +19,7 @@ namespace SpecflowTests.Utils
         public void SetUp()
         {
             //Launch the browser
-            Driver.Initialize();
+            Initialize();
             Thread.Sleep(5000);
 
             //Call the Login Class            

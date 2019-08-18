@@ -22,14 +22,13 @@ namespace SpecflowPages.Utils
 
             //Click on Add New button@FindBy(xpath = "(//div[contains(.,'Add New')])[11]")
              Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div")).Click();
-           
             //Enter the language
             Driver.driver.FindElement(By.XPath("//input[@name = 'name']")).SendKeys("Hindi");
             //Select the language level.
             SelectElement select = new SelectElement(Driver.driver.FindElement(By.XPath("//select[@name ='level']")));
             select.SelectByIndex(1);
-             //Click on Add
-             Driver.driver.FindElement(By.XPath("//input[@value='Add']")).Click();
+            //Click on Add
+            Driver.driver.FindElement(By.XPath("//input[@value='Add']")).Click();
             
 
         }
@@ -43,21 +42,16 @@ namespace SpecflowPages.Utils
                 CommonMethods.ExtentReports();
                 //Thread.Sleep(1000);
                 CommonMethods.test = CommonMethods.extent.StartTest("Add a Language");
-
-                String expectedValue = "Hindi";
-
-                
+                String expectedValue = "Hindi";    
                 string actualValue = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[1]")).Text;
                     //Check if expected value is equal to actual value
-
                     if (expectedValue == actualValue)
-                    {
-
+                { 
                         CommonMethods.test.Log(LogStatus.Pass, "Test Passed, Added a Language Successfully");
                         SaveScreenShotClass.SaveScreenshot(Driver.driver, "LanguageAdded");
                         Assert.IsTrue(true);
 
-                    }
+                  }
 
                     else
                         CommonMethods.test.Log(LogStatus.Fail, "Test Failed");
@@ -74,9 +68,8 @@ namespace SpecflowPages.Utils
         //Update the given Language
         public void UpdateLang()
         {
-            String expecteValue= "Chinese1";
-
-            //Get the table list
+            String expecteValue = "Hindi";
+             //Get the table list
             IList<IWebElement> Tablerows = Driver.driver.FindElements(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr"));
             //Get the row count in table
             var rowCount = Tablerows.Count;
@@ -92,21 +85,16 @@ namespace SpecflowPages.Utils
                 {
 
                     //CliCk on Edit icon
-
                     Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td[3]/span[1]/i")).Click();
-
-
                     //Send Language name to update
                     IWebElement editRowValue = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div/div[1]/input[1]"));
                     //Clear Previous text 
                     editRowValue.Clear();
-                    editRowValue.SendKeys("Japnese");
-
+                    editRowValue.SendKeys("Spanish");
                     //Select Language Level to update
                     var langLevelList = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div/div[2]/select"));
                     var selectElement = new SelectElement(langLevelList);
                     selectElement.SelectByIndex(2);
-
                     // Click on update button
                     Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td/div/span/input[1]")).Click();
 
@@ -120,7 +108,6 @@ namespace SpecflowPages.Utils
         //Validate the updated language
         public  void ValidateUpdatedLang()
         {
-
             try
             {
                 //Start the Reports
@@ -128,7 +115,7 @@ namespace SpecflowPages.Utils
                 Thread.Sleep(1000);
                 CommonMethods.test = CommonMethods.extent.StartTest("Updated a Language");
 
-                String expectedValue = "Japnese";
+                String expectedValue = "Spanish";
                 Thread.Sleep(1000);
                 string actualValue = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[1]")).Text;
                 Thread.Sleep(500);
@@ -163,11 +150,10 @@ namespace SpecflowPages.Utils
             {
                 //Get the xpath of ith row LanguageName
                 String rowValue = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td[1]")).Text;
-                Console.WriteLine("Beforeifdel" + rowValue);
                 //check if the DeleteLanguage parameter matches with ith Row LanguageName
-                if (rowValue.Equals(expectedValue))
+                if (rowValue==expectedValue)
                 {
-                    Console.WriteLine("afterifdel" + expectedValue);
+        
                     // Click on delete button
                     Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td[3]/span[2]/i")).Click();
 

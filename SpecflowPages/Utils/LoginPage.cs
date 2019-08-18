@@ -13,12 +13,6 @@ namespace SpecflowPages.Utils
 {
   public class LoginPage
     {
-        IWebDriver driver;
-
-        public LoginPage(IWebDriver driver)
-        {
-            this.driver = driver;
-        }
         public static void LoginStep()
         {
 
@@ -27,9 +21,9 @@ namespace SpecflowPages.Utils
 
             Driver.driver.FindElement(By.XPath("//a[contains(.,'Sign In')]")).Click();
             //Enter Username
-            Driver.driver.FindElement(By.XPath("//input[@name='email']")).SendKeys("abc@gmail.com");
+            Driver.driver.FindElement(By.XPath("//input[@name='email']")).SendKeys("prabhavathi6@gmail.com");
             //Enter password
-            Driver.driver.FindElement(By.XPath("//input[contains(@name,'password')]")).SendKeys("hello123  ");
+            Driver.driver.FindElement(By.XPath("//input[contains(@name,'password')]")).SendKeys("prabha@ic");
             Thread.Sleep(1000);
             //Click on Login Button
             Driver.driver.FindElement(By.XPath("//button[contains(.,'Login')]")).Click();
