@@ -1,6 +1,8 @@
 ﻿
+using OpenQA.Selenium;
 using RelevantCodes.ExtentReports;
 using SpecflowPages;
+using SpecflowPages.Utils;
 using System.Threading;
 using TechTalk.SpecFlow;
 using static SpecflowPages.CommonMethods;
@@ -12,7 +14,7 @@ namespace SpecflowTests.Utils
     [Binding]
     public class Start : Driver
     {
-       
+
         [BeforeScenario]
         public void SetUp()
         {
@@ -21,8 +23,8 @@ namespace SpecflowTests.Utils
             Thread.Sleep(5000);
 
             //Call the Login Class            
-            SpecflowPages.Utils.LoginPage.LoginStep();
-
+           SpecflowPages.Utils.LoginPage.LoginStep();; 
+            
         }
        
         [AfterScenario]                

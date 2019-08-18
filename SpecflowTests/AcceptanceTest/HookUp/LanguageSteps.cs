@@ -10,7 +10,7 @@ using SpecflowPages.Utils;
 namespace SpecflowTests.AcceptanceTest.HookUp
 {
     [Binding]
-    public class LanguageSteps : Utils.Start
+    public class LanguageSteps 
     {
         ProfileLangPage languageObj;
         private ProfileLangPage langObj;
@@ -22,7 +22,7 @@ namespace SpecflowTests.AcceptanceTest.HookUp
             //Wait
             Thread.Sleep(1500);
             // Click on Profile tab
-             driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[1]/div/a[2]")).Click();
+             Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[1]/div/a[2]")).Click();
 
            
         }

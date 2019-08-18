@@ -15,21 +15,21 @@ namespace SpecflowPages.Utils
    public  class ProfileLangPage
     {
 
-
+     
         //Add New Language
-        public  void AddLang()
+        public void AddLang()
         {
-            
-                //Click on Add New button
-                Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div")).Click();
 
-                //Enter the language
-                Driver.driver.FindElement(By.XPath("//input[@name = 'name']")).SendKeys("Hindi");
-                //Select the language level.
-                SelectElement select = new SelectElement(Driver.driver.FindElement(By.XPath("//select[@name ='level']")));
-                select.SelectByIndex(1);
-                //Click on Add
-                Driver.driver.FindElement(By.XPath("//input[@value='Add']")).Click();
+            //Click on Add New button@FindBy(xpath = "(//div[contains(.,'Add New')])[11]")
+             Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div")).Click();
+           
+            //Enter the language
+            Driver.driver.FindElement(By.XPath("//input[@name = 'name']")).SendKeys("Hindi");
+            //Select the language level.
+            SelectElement select = new SelectElement(Driver.driver.FindElement(By.XPath("//select[@name ='level']")));
+            select.SelectByIndex(1);
+             //Click on Add
+             Driver.driver.FindElement(By.XPath("//input[@value='Add']")).Click();
             
 
         }

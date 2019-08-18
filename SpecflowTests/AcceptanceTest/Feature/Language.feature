@@ -3,7 +3,6 @@
       I want to be able to Add,update,Delete Languages 
       In order to update my profile details
 
-   
 @automation
 Scenario: Add language
 	Given I clicked on the profile tab under Profile page

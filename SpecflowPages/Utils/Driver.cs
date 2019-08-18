@@ -26,6 +26,7 @@ namespace SpecflowPages
                 driver.Manage().Window.Maximize();
 
                 driver.Navigate().GoToUrl(BaseUrl);
+
             }
             catch(TimeoutException e)
             {

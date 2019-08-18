@@ -13,9 +13,16 @@ namespace SpecflowPages.Utils
 {
   public class LoginPage
     {
+        IWebDriver driver;
+
+        public LoginPage(IWebDriver driver)
+        {
+            this.driver = driver;
+        }
         public static void LoginStep()
         {
-            Driver.NavigateUrl();
+
+            //driver.NavigateUrl();
             Thread.Sleep(1000);
 
             Driver.driver.FindElement(By.XPath("//a[contains(.,'Sign In')]")).Click();
@@ -31,6 +38,6 @@ namespace SpecflowPages.Utils
            IWebElement loggedin = Driver.driver.FindElement(By.XPath("//*[@id='account-profile-section']/div/div[1]/div[2]/div/span"));
            Assert.AreEqual(loggedin.Text,"Hi prabhavathi");
         }
-
+        
     }
 }
